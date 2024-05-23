@@ -5,14 +5,12 @@ const router = express.Router();
 /* ************************************************************************* */
 // Define Your API Routes Here
 /* ************************************************************************* */
+const { browse, read } = require("../../../controllers/categoryActions");
 
-// Import item-related actions
-const { browse, read } = require("../../../controllers/programActions");
-
-// Route to get a list of programs
+// Route to get a list of categories
 router.get("/", browse);
 
-router.get("/:id", read); // Complete path is: /api/programs/:id
+router.get("/:id", read); // Complete path is: /api/categories/:id
 
 /* ************************************************************************* */
 
