@@ -10,3 +10,18 @@ create table item (
   user_id int unsigned not null,
   foreign key(user_id) references user(id)
 );
+
+CREATE TABLE program (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    title VARCHAR(120) NOT NULL,
+    synopsis TEXT NOT NULL,
+    poster TEXT NOT NULL,
+    country VARCHAR(80) NOT NULL,
+    year INT NOT NULL,
+    category_id INT
+);
+
+CREATE TABLE category (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    name VARCHAR(80)
+);
